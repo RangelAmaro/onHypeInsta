@@ -2,6 +2,15 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-51KVRXF225"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-51KVRXF225');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma HypeInsta</title>
@@ -16,7 +25,7 @@
     </header>
     <main>
 
-        <h1 class="titulo-1">Seu perfil com + <span class="typing-effect" id="typingEffect"></span></h1>
+        <h1 class="titulo-1">Seu perfil com mais <span class="typing-effect" id="typingEffect"></span></h1>
         <div class="subtitulo-1">
             <div class="subtitulo-1-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -110,35 +119,35 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const words = ["Seguidores", "Curtidas", "Visualizações", "Comentários"];
             let wordIndex = 0;
             let charIndex = 0;
             const typingEffectElement = document.getElementById('typingEffect');
-          
+
             function type() {
-              if (charIndex < words[wordIndex].length) {
-                typingEffectElement.textContent += words[wordIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, 100);
-              } else {
-                setTimeout(erase, 1000);
-              }
+                if (charIndex < words[wordIndex].length) {
+                    typingEffectElement.textContent += words[wordIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 100);
+                } else {
+                    setTimeout(erase, 1000);
+                }
             }
-          
+
             function erase() {
-              if (charIndex > 0) {
-                typingEffectElement.textContent = words[wordIndex].substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(erase, 100);
-              } else {
-                wordIndex = (wordIndex + 1) % words.length;
-                setTimeout(type, 500);
-              }
+                if (charIndex > 0) {
+                    typingEffectElement.textContent = words[wordIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, 100);
+                } else {
+                    wordIndex = (wordIndex + 1) % words.length;
+                    setTimeout(type, 500);
+                }
             }
-          
+
             type();
-          });          
+        });          
     </script>
 
     <footer>
