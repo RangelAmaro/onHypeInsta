@@ -124,6 +124,19 @@ main {
     color: var(--branco-padrao);
 }
 
+.ja-tenho-conta{
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--azul-ultra-escuro);
+    padding-top: 7px;
+    display: block;
+}
+
+.tx-branco{
+    color: var(--branco-medio)!important;
+}
+
 .parte-preta {
     background-color: var(--preto-padrao);
     margin: 15px -5vw;
